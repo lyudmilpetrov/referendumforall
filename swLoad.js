@@ -2,7 +2,7 @@
     e.waitUntil(
       caches.open('referendumcache').then(cache => {
           return cache.addAll([
-            '/',
+            'referendumforall/',
             'index.html',
             'browserconfig.xml',
             'favicon.ico',
