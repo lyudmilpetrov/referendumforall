@@ -1,0 +1,39 @@
+﻿<div ng-controller="bgrCtrl" ng-cloak>
+    <center>
+    <nav class="navbar container-smooth">
+        <div class="container-smooth">
+            <div class="row">
+                    <h1><strong>{{words.beggingCountry}}</strong></h1><hr />
+            </div>
+        </div>
+    </nav>
+    </center>
+        <center>
+            <div class="container-smooth">
+                <div class="row">
+                    <center>
+                        <span class="btn-lg pull-left">
+                            <button type="submit" class="btn-lg" id="newRef" ng-click="newRef()" ng-hide="supRefReady" aria-label="{{words.ariaBtn.btnNewRef}}" aria-pressed="false" tabindex="1">
+                                {{words.createRef}}
+                            </button>
+                        </span>
+                        <span class="btn-lg pull-right">
+                            <button type="submit" class="btn-lg" id="newCheckRef" ng-click="supportRef()" ng-hide="supRefReady" aria-label="{{words.ariaBtn.btnSupRef}}" aria-pressed="false" tabindex="2">
+                                {{words.supportRef.f}}
+                            </button>
+                        </span>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div class="slide-animate-container">
+                            <div class="slide-animate" ng-include="urlRef"></div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </center>
+</div>

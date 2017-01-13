@@ -1,0 +1,11 @@
+﻿<div ng-model="loadingFile" slide-show-duration="2000" bn-slide-show="isVisibleFile" ng-cloak>
+    <div id="x" class="fileinput fileinput-new input-group" data-provides="fileinput">
+        <div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i><span class="fileinput-filename"></span></div>
+        <span class="input-group-addon btn btn-default btn-file" aria-label="Test">
+            <span class="fileinput-new">{{words.loadFile.l}}</span><span class="fileinput-exists">{{words.loadFile.c}}</span>
+            <input type="file" ng-model="file.data" file-select="data" file-loaded="myLoaded()" file-error="myError($error)" file-progress="myProgress($total,$loaded)" aria-pressed="false" auto-focus tabindex="11">
+        </span>
+        <a class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput" ng-click="manageFileNow('r');">{{words.loadFile.r}}</a>
+        <a class="input-group-addon btn btn-default fileinput-exists" ng-click="manageFileNow('s');">{{words.loadFile.s}}</a>
+    </div>
+</div>

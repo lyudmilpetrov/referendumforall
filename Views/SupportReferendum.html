@@ -1,0 +1,59 @@
+﻿<div ng-controller="bgrCtrl" class="container-fluid" ng-cloak>
+    <center>
+        <div class="form-bottom">
+            <form role="form" class="login-form">
+                <div class="border boxshadow" ng-repeat="i in words.referendumsAll track by $index"  aria-label={{'Referndum with title ' + words.genericWords.refData.Title}}>
+                    <section>
+                        <br />
+                        <label style="float: left;" for="title" arai-lable="Here">{{words.genericWords.refData.Title}} :</label> <a href="" style="float: left;" id="title"> {{i.title}}</a>
+                    </section>
+                    <br />
+                    <p>
+                        <aside>
+                            <label for="desc">{{words.genericWords.refData.Desc}}:</label>
+                            <a href="" id="desc">{{i.description}}</a>
+                            <br />
+                            <label for="support">{{words.genericWords.refData.Supported}}:</label>
+                            <a href="" id="support">{{i.s}}</a>
+                            <br />
+                            <label for="att">{{words.genericWords.refData.Attach}}:</label>
+                            <a href="{{(i.att==='https://allpeopleunited.blob.core.windows.net/' ? '' : i.att)}}" id="att">{{(i.att==='https://allpeopleunited.blob.core.windows.net/' ? words.genericWords.refData.AttachEmpty : i.title)}}</a>
+                        </aside>
+                        <div class="btn-toolbar">
+                            <button type="submit" class="btn-lg" id="supportRefBtn{{$index}}" ng-click="voteForRef($index,1)" style="float: left;">
+                                {{dynamicButtons.supRef}}
+                            </button>
+                        </div>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </center>
+</div>
+<script type="text/ng-template" id="voteForReferendum">
+    <div class="ngdialog-message">
+        <div class="row">
+            <center>
+                <div id="supRef" class="form-bottom">
+                    <form role="form" class="login-form">
+                        <input type="text" name="fieldsRefFirstName" placeholder="{{words.fieldsRefFirstName.f}}" id="fieldsRefFirstName" class="form-username form-control" ng-model="item.selected2" ng-change="trackChanges(item.selected2,3,words.fieldsRefFirstName.l,'N')" ng-blur="updateNewReferendum($event,3)" autocomplete="fname" autofill="autofill" ng-hide="false" ng-focus="focusNewReferendum(item.selected2,3,3,'N')" auto-focus tabindex="0" required>
+                        <br />
+                        <input type="text" name="form-email" placeholder="{{words.fieldsRefLastName.f}}" id="fieldsRefLastName" class="form-username form-control" ng-model="item.selected3" ng-change="trackChanges(item.selected3,4,words.fieldsRefLastName.l,'N')" ng-blur="updateNewReferendum($event,4)" autocomplete="lname" autofill="autofill" ng-hide="words.fieldsRefLastName.h" ng-focus="focusNewReferendum(item.selected3,4,3,'N')" required>
+                        <br />
+                        <input type="text" name="form-email" placeholder="{{words.fieldsRefEmail.f}}" id="fieldsRefEmail" class="form-username form-control" ng-model="item.selected4" ng-change="trackChanges(item.selected4,5,words.fieldsRefEmail.l,'N')" ng-blur="updateNewReferendum($event,5)" autocomplete="email" autofill="autofill" ng-hide="words.fieldsRefEmail.h" ng-focus="focusNewReferendum(item.selected4,5,3,'N')" required>
+                        <br />
+                        <input type="number" name="form-email" placeholder="{{words.fieldsRefPhone.f}}" id="fieldsRefPhone" class="form-username form-control" ng-model="item.selected5" ng-change="trackChanges(item.selected5,6,words.fieldsRefPhone.l,'N')" ng-blur="updateNewReferendum($event,6)" autocomplete="phone" autofill="autofill" ng-hide="words.fieldsRefPhone.h" ng-focus="focusNewReferendum(item.selected5,6,3,'N')" required>
+                        <br />
+                        <input type="text" name="form-email" placeholder="{{words.fieldsRefEmailConfirm.f}}" id="fieldsRefEmailConfirm" class="form-username form-control" ng-model="item.selected6" ng-change="trackChanges(item.selected6,7,words.fieldsRefEmailConfirm.l,'N')" ng-blur="updateNewReferendum($event,7);" ng-hide="words.fieldsRefEmailConfirm.h" ng-focus="focusNewReferendum(item.selected6,7,3,'N')" maxlength="4" required>
+                        <br />
+                        <input type="text" name="form-email" placeholder="{{words.fieldsRefPhoneConfirm.f}}" id="fieldsRefPhoneConfirm" class="form-username form-control" ng-model="item.selected7" ng-change="trackChanges(item.selected7,8,words.fieldsRefPhoneConfirm.l,'N')" ng-blur="updateNewReferendum($event,8);" ng-hide="words.fieldsRefPhoneConfirm.h" ng-focus="focusNewReferendum(item.selected7,8,3,'N')" maxlength="4" required>
+                        <br />
+                        <button type="submit" class="btn-lg" id="supportRef" ng-click="voteForRef(0,0)" ng-hide="words.registerRef.h">
+                            {{dynamicButtons.supRefFinal}}
+                        </button>
+                    </form>
+                </div>
+            </center>
+        </div>
+    </div>
+</script>

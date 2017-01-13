@@ -1,0 +1,30 @@
+﻿<div ng-controller="bgrCtrl" class="container-fluid" ng-cloak>
+    <div id="newRefMargine" class="row">
+        <center>
+            <div class="form-bottom">
+                <form role="form" class="login-form">
+                    <input type="text" name="fieldsRefTitle" placeholder="{{words.fieldsRefTitle.f}}" id="fieldsRefTitle" class="form-username form-control" ng-model="item.selected0" ng-change="trackChanges(item.selected0,1,words.fieldsRefTitle.l,'Y')" ng-blur="updateNewReferendum($event,1)" ng-hide="words.fieldsRefTitle.h" ng-focus="focusNewReferendum(item.selected0,1,4,'Y')" required auto-focus tabindex="3">
+                    <br />
+                    <textarea name="fieldsRefGoals" class="form-username form-control" placeholder="{{words.fieldsRefGoals.f}}" id="fieldsRefGoals" ng-model="item.selected1" ng-change="trackChanges(item.selected1,2,words.fieldsRefGoals.l,'Y')" ng-blur="updateNewReferendum($event,2)" ng-hide="words.fieldsRefGoals.h" ng-focus="focusNewReferendum(item.selected1,2,10,'Y')" required auto-focus tabindex="4"></textarea>
+                    <br />
+                    <input type="text" name="fieldsRefFirstName" placeholder="{{words.fieldsRefFirstName.f}}" id="fieldsRefFirstName" class="form-username form-control" ng-model="item.selected2" ng-change="trackChanges(item.selected2,3,words.fieldsRefFirstName.l,'Y')" ng-blur="updateNewReferendum($event,3)" autocomplete="fname" autofill="autofill" ng-hide="words.fieldsRefFirstName.h" ng-focus="focusNewReferendum(item.selected2,3,1,'Y')" required auto-focus tabindex="5">
+                    <br />
+                    <input type="text" name="form-email" placeholder="{{words.fieldsRefLastName.f}}" id="fieldsRefLastName" class="form-username form-control" ng-model="item.selected3" ng-change="trackChanges(item.selected3,4,words.fieldsRefLastName.l,'Y')" ng-blur="updateNewReferendum($event,4)" autocomplete="lname" autofill="autofill" ng-hide="words.fieldsRefLastName.h" ng-focus="focusNewReferendum(item.selected3,4,1,'Y')" required auto-focus tabindex="6">
+                    <br />
+                    <input type="text" name="form-email" placeholder="{{words.fieldsRefEmail.f}}" id="fieldsRefEmail" class="form-username form-control" ng-model="item.selected4" ng-change="trackChanges(item.selected4,5,words.fieldsRefEmail.l,'Y')" ng-blur="updateNewReferendum($event,5)" autocomplete="on" autofill="autofill" ng-hide="words.fieldsRefEmail.h" ng-focus="focusNewReferendum(item.selected4,5,6,'Y')" required auto-focus tabindex="7">
+                    <br />
+                    <input type="number" name="form-email" placeholder="{{words.fieldsRefPhone.f}}" id="fieldsRefPhone" class="form-username form-control" ng-model="item.selected5" ng-change="trackChanges(item.selected5,6,words.fieldsRefPhone.l,'Y')" ng-blur="updateNewReferendum($event,6)" autocomplete="on" autofill="autofill" ng-hide="words.fieldsRefPhone.h" ng-focus="focusNewReferendum(item.selected5,6,6,'Y')" required auto-focus tabindex="8">
+                    <br />
+                    <input type="text" name="form-email" placeholder="{{words.fieldsRefEmailConfirm.f}}" id="fieldsRefEmailConfirm" class="form-username form-control" ng-model="item.selected6" ng-change="trackChanges(item.selected6,7,words.fieldsRefEmailConfirm.l,'Y')" ng-blur="updateNewReferendum($event,7);" ng-hide="words.fieldsRefEmailConfirm.h" ng-focus="focusNewReferendum(item.selected6,7,4,'Y')" maxlength="4" required auto-focus tabindex="9">
+                    <br />
+                    <input type="text" name="form-email" placeholder="{{words.fieldsRefPhoneConfirm.f}}" id="fieldsRefPhoneConfirm" class="form-username form-control" ng-model="item.selected7" ng-change="trackChanges(item.selected7,8,words.fieldsRefPhoneConfirm.l,'Y')" ng-blur="updateNewReferendum($event,8);" ng-hide="words.fieldsRefPhoneConfirm.h" ng-focus="focusNewReferendum(item.selected7,8,4,'Y')" maxlength="4" required auto-focus tabindex="10">
+                    <br />
+                    <!--<loadingfile style="display:none;" ng-style="loadedfile"></loadingfile>-->
+                    <div ng-include="urlFile"></div>
+                    <br />
+                    <button type="submit" class="btn-lg" id="registerRef" ng-click="registerReferendum()" ng-hide="words.registerRef.h" aria-label="{{words.ariaBtn.btnNewRefFinal}}" aria-pressed="false" auto-focus tabindex="12">{{dynamicButtons.regRef}}</button>
+                </form>
+            </div>
+        </center>
+    </div>
+</div>

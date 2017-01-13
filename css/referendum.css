@@ -1,0 +1,94 @@
+﻿body{
+    background-color: #ececac;
+}
+a,h1,label {
+font-size:25px;
+margin:10px;
+color:black;
+}
+#Link:link    {color:green; background-color:transparent; text-decoration:none}
+#Link:visited {color:pink; background-color:transparent; text-decoration:none}
+#Link:hover   {color:red; background-color:transparent; text-decoration:underline}
+#Link:active  {color:yellow; background-color:transparent; text-decoration:underline}
+.form-username {
+font-size:25px;
+color:black;
+}
+.form-control{
+height:50px;
+font-size:25px;
+color:black;
+}
+.fileinput-filename {
+font-size:25px;
+color:black;
+}
+hr{
+ border:2px solid lightslategray;
+}
+.border{
+    border:3px solid white;
+    margin:10px;
+}
+.boxshadow {
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    left: 15%; /* one half of the remaining 30% */
+    bottom: 0;
+}
+.btn-lg {
+    margin-left:15px;
+    margin-right:15px;
+    color:black;
+    font-size:25px;
+}
+.input-group-addon {
+    margin-left:25px;
+    color:black;
+    font-size:25px;
+}
+#supRef{
+    margin: 5px;
+    margin-top:12px;
+}
+#newRefMargine{
+     margin-left: 5px;
+     margin-right: 5px;
+}
+/*.slide-animate-container {
+  position:relative;
+  height: 800px;
+  overflow:hidden;
+}
+
+.slide-animate {
+  padding:10px;
+}
+
+.slide-animate.ng-enter, .slide-animate.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.7s;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display:block;
+  padding:10px;
+}
+
+.slide-animate.ng-enter {
+  top:-450px;
+}
+.slide-animate.ng-enter.ng-enter-active {
+  top:0;
+}
+
+.slide-animate.ng-leave {
+  top:0;
+}
+.slide-animate.ng-leave.ng-leave-active {
+  top:450px;
+}*/
