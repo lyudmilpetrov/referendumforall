@@ -1,6 +1,6 @@
 ﻿(function () {
     if (typeof (window['caches']) !== 'undefined' && ('serviceWorker' in navigator)) {
-        navigator.serviceWorker.register('swLoad.min.js', { scope: '/' })
+        navigator.serviceWorker.register('swLoad.min.js', { scope: '/referendumforall/' })
           .then(function (registration) {
           }).catch(function (error) {
               // error here
